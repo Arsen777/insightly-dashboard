@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import type { FC } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+import MoodTracker from "./components/MoodTracker";
+import MoodAnalysis from "./components/MoodAnalysis";
+import { MoodProvider } from "./context/MoodContext";
+import MoodTrendsChart from "./components/MoodTrendsChart";
+import DailyInsightsSummary from "./components/DailyInsightsSummary";
+
+import './styles/global.css';
+import styles from "./styles/App.module.css";
+
+const App: FC = () => (
+  <MoodProvider>
+    <div className={styles.container}>
+      <h1 className={styles.header}>Welcome to Insightly Dashboard</h1>
+
+      <DailyInsightsSummary />
+      <MoodTracker />
+      <MoodAnalysis />
+      <MoodTrendsChart />
     </div>
-  );
-}
+  </MoodProvider>
+);
 
 export default App;

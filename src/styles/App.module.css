@@ -1,0 +1,129 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  gap: 20px;
+}
+
+.header {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text-color);
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  transition: transform var(--transition-duration),
+    box-shadow var(--transition-duration);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cardTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.cardText {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+}
+
+.cardIcon {
+  font-size: 2rem;
+  color: var(--highlight-color);
+  margin-bottom: 10px;
+}
+
+.button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-duration),
+    transform var(--transition-duration);
+  box-shadow: var(--box-shadow);
+}
+
+.button:hover {
+  background-color: #45a049;
+  transform: translateY(-3px);
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.moodTracker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 500px;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.moodTracker select {
+  font-size: 1.1rem;
+  padding: 8px;
+  border-radius: var(--border-radius);
+  border: 1px solid #ccc;
+  width: 100%;
+  transition: border 0.3s ease;
+}
+
+.moodTracker select:focus {
+  border-color: var(--primary-color);
+}
+
+.moodAnalysis {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  color: var(--accent-color);
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    font-size: 2rem;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .moodTracker {
+    padding: 15px;
+  }
+}

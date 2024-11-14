@@ -1,0 +1,39 @@
+/* styles/global.css */
+
+/* Define Root Colors and Variables */
+:root {
+  --primary-color: #4caf50; /* Green */
+  --secondary-color: #ff5722; /* Orange */
+  --accent-color: #9e9e9e; /* Gray */
+  --background-color: #fafafa; /* Light Gray */
+  --text-color: #333; /* Dark Text */
+  --highlight-color: #ff7043; /* Light Orange */
+  --font-family: "Helvetica Neue", sans-serif;
+  --font-size-base: 16px;
+  --border-radius: 8px; /* For rounded corners */
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+  --transition-duration: 0.3s; /* Smooth transition */
+}
+
+/* Reset margin and padding for all elements to ensure consistency */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles for Body */
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition: all var(--transition-duration) ease;
+}
